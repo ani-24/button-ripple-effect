@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+:root {
+  --gradient: linear-gradient(to right, #34e89e, #0f3443);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.btn {
+  position: relative;
+  font-size: 5rem;
+  padding: 0.25em 1em;
+  border-radius: 100px;
+  background: var(--gradient);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ripple 500ms ease-in-out;
+}
+
+@keyframes ripple {
+  from {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    height: 500px;
+    width: 500px;
+    opacity: 0;
+  }
+}
